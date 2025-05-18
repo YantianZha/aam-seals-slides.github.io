@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<!-- Font awesome is required for the chalkboard plugin -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<!-- Custom controls plugin is used to for opening and closing annotation modes. -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/plugin.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/customcontrols/style.css">
+		<!-- Chalkboard plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/plugin.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chalkboard/style.css">
+
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<!-- Load content plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/loadcontent/plugin.js"></script>
+
+		<!-- Fullscreen plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/fullscreen/plugin.js"></script>
+
+		<!--Math Equation Editing-->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+		<!-- Chart plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+
+		<script type="text/javascript" src="dist/reveal.js"></script>
+		<script src="plugin/appearance/appearance.js"></script>
+
+		<!-- Load content plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/loadcontent/plugin.js"></script>
+		<!-- Animate plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/animate/plugin.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
+
+<!--		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>-->
+<!--			<script>-->
+<!--			$(function(){-->
+<!--			  $("#includedContent").load("diagram/diagram2.html");-->
+<!--			});-->
+<!--			</script>-->
+
+		<!--Diagram Plugin-->
+<!--		<link rel="stylesheet" href="reveal.js/css/reveal.css">-->
+<!--        <link rel="stylesheet" href="reveal.js/css/theme/black.css">-->
+
+<!--		&lt;!&ndash;[if lt IE 9]>-->
+<!--		<script src="reveal.js/lib/js/html5shiv.js"></script>-->
+<!--		<![endif]&ndash;&gt;-->
+
+		<title>Cognitively-Enhanced Robotic Manipulation Across Sea, Air, and Land</title>
+<!--		<input type="text" autocapitalize="off">-->
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="dist/custom.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins/menu/font-awesome/css/fontawesome.css">
+
+		<link rel="stylesheet" href="plugin/diagram/revealjs-diagram.css">
+		<!-- Theme used for syntax highlighted code -->
+<!--		<link rel="stylesheet" href="plugin/highlight/monokai.css">-->
+		<!-- Theme used for syntax highlighted code -->
+	<!--		<link rel="stylesheet" href="plugin/highlight/atom-one-dark.css" />-->
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<section data-auto-animate>
+						<!-- title slide -->
+						<h2 style="font-weight: normal"><b style="color: deepskyblue">AAM-SEALS</b>: Benchmarking <b style="color: deepskyblue">A</b>erial-<b style="color: deepskyblue">A</b>quatic, <b style="color: deepskyblue">M</b>anipulators, <span class="no-transform">in</span> <b style="color: deepskyblue">SE</b>a, <b style="color: deepskyblue">A</b>ir, <span class="no-transform">and</span> <b style="color: deepskyblue">L</b>and <b style="color: deepskyblue">S</b>imulator</h2>
+						<div>
+							<div style="font-size: 27px;">
+								<span>
+									<a href="https://www.linkedin.com/in/william-yang-66ab84221">William Yang*</a>,</span>
+								<span>
+									<a href="">Karthikeya Kona*</a>,</span>
+								<span>
+									<a href="https://www.linkedin.com/in/yashveerjain">Yashveer Jain*</a>,</span>
+								<span>
+									<a href="https://www.linkedin.com/in/tomer-atzili-596657265">Tomer Atzili*</a>,</span>
+								<span>
+									<a href="https://in.linkedin.com/in/abhinav-bhamidipati">Abhinav Bhamidipati</a>,</span>
+
+								<span>
+									<a href="">Xiaomin Lin</a>,</span>
+								<span>
+									<a href="https://yantianzha.github.io/">Yantian Zha</a></span>
+
+								<p style="font-family: monospace; font-size: 0.8em;">* Equal Contribution</p>
+<!--								<p style="font-size: 0.8em;">University of Maryland, College Park</p>-->
+
+							</div>
+
+							<div style="display: flex; justify-content: space-around; position: relative; left: -140px; bottom: 40px; width: 1550px">
+								<img style="height: 143px; width: auto; margin-right: -460px;" src="figures/job_talk/William.svg">
+								<img style="height: 143px; width: auto; margin-right: -460px;" src="figures/job_talk/Karthik.png">
+								<img style="height: 143px; width: auto; margin-right: -460px;" src="figures/job_talk/Yash.svg">
+								<img style="height: 143px; width: auto; margin-right: -460px;" src="figures/job_talk/Tomer.svg">
+								<img style="height: 143px; width: auto; margin-right: -460px;" src="figures/job_talk/Abhinav.svg">
+
+								<img style="height: 143px; width: auto; margin-right: -460px;" src="figures/job_talk/Xiaomin2.png">
+
+								<img style="height: 143px; width: auto;" src="figures/yantian.png">
+							</div>
+						</div>
+
+						<img class="noborder" src="figures/AAM-SEALS/AAM_2.gif" data-autoplay data-loop style="position:absolute; bottom: -150px; left: 360px; width: 550px;" />
+
+						<img class="stack fade-up" src="figures/job_talk/umd2.webp" style="position:fixed; bottom: 0px; left: 0px; width: 140px;" />
+<!--						<img class="stack fade-up" src="figures/job_talk/work_under_review.svg" style="position:fixed; bottom: 0px; right: 0px; width: 160px;" />-->
+						<img class="stack fade-up" src="figures/on_news_icon.png" style="position:fixed; bottom: 0px; right: 0px; width: 160px;" />
+
+					</section>
+
+					<section data-background-transition="slide" data-background-image="figures/AAM-SEALS/SEALS_intro1.jpg"></section>
+
+
+<!--						<img class="noborder fragment" data-fragment-index="0" src="figures/AAM-SEALS/media6.mp4"-->
+<!--							style="position:fixed; top: 150px; left: 623px; width: 450px;" />-->
+<!--						<img class="noborder fragment" data-fragment-index="0" src="figures/AAM-SEALS/media7.mp4"-->
+<!--							style="position:fixed; top: 150px; left: 623px; width: 450px;" />-->
+
+					<section data-auto-animate>
+						<h2>Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>
+					</section>
+
+<!--					<section data-auto-animate>-->
+<!--						<h2>Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>-->
+<!--						<h3>What <span class="no-transform">is a good modeling of AAM?</span></h3>-->
+<!--					</section>-->
+
+<!--					<section data-auto-animate>-->
+<!--						<h2>Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>-->
+<!--						<h3>What <span class="no-transform">is a good modeling of AAM?</span></h3>-->
+<!--						<h3>What <span class="no-transform">is a good control system for AAMs?</span></h3>-->
+<!--					</section>-->
+
+<!--					<section data-auto-animate>-->
+<!--						<h2>Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>-->
+<!--						<h3>What <span class="no-transform">is a good modeling of AAM?</span></h3>-->
+<!--						<h3>What <span class="no-transform">is a good control system for AAMs?</span></h3>-->
+<!--						<h3>What <span class="no-transform">is a good robot learning technique for AAMs?</span></h3>-->
+<!--					</section>-->
+
+					<section data-auto-animate>
+						<h2 style="font-size: xxx-large">Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>
+						<div class="text-container" style="position: absolute; top: 50px; left: 200px">
+							<img class="noborder" style="width: 30%; " src="figures/AAM-SEALS/chicken-and-egg-1.png"/>
+							<p>High cost, <span class="no-transform">High risk, and High environment requirement</span></p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle" style="font-size: xxx-large">Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>
+						<img class="noborder" src="figures/AAM-SEALS/chicken-and-egg-1.png" style="position: absolute; top: 50px; left: 800px; width: 200px; z-index: 0"/>
+						<img src="figures/AAM-SEALS/chicken-and-egg-4.png" style="position: relative; left: -300px; z-index: 0"/>
+
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle" style="font-size: xxx-large">Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>
+						<img src="figures/AAM-SEALS/chicken-and-egg.png" style="width: 75%"/>
+
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle" style="font-size: xxx-large">Developing <span class="no-transform">a novel class of robots is challenging!</span></h2>
+						<img class="noborder" src="figures/AAM-SEALS/chicken-and-egg.png"/>
+						<img class="noborder" src="figures/AAM-SEALS/chicken-and-egg-1.png" style="position: absolute; top: 250px; left: 800px; width: 200px; z-index: 1"/>
+						<img src="figures/AAM-SEALS/chicken-and-egg-4.png" style="position: relative; left: -300px; top: -450px; z-index: 1"/>
+<!--						<p class="fragment" data-fragment-index="0" style="position: fixed; z-index: 2; top: 480px; left: 75px; font-size: 22px; text-align: left">✅ <span style="color: dimgrey;">Efficiently explore robot designs and control</span></p>-->
+<!--						<p class="fragment" data-fragment-index="1" style="position: fixed; z-index: 2; top: 520px; left: 75px; font-size: 22px; text-align: left">✅ <span style="color: dimgrey;">Efficiently explore robot learning techniques</span></p>-->
+<!--						<p class="fragment" data-fragment-index="2" style="position: fixed; z-index: 2; top: 550px; left: 75px; font-size: 22px; text-align: left">✅ <span style="color: dimgrey;">Reduced development risk and cost</span></p>-->
+<!--						<p class="fragment" data-fragment-index="3" style="position: fixed; z-index: 2; top: 580px; left: 75px; font-size: 22px; text-align: left">✅ <span style="color: dimgrey;">Sim2Real Transfer</span></p>-->
+
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h3>AAM-SEALS Framework</h3>
+					</section>
+
+<!--					<section data-auto-animate>-->
+<!--						<h3>AAM-SEALS Framework</h3>-->
+<!--						<img src="figures/AAM-SEALS/SEALS_arch.PNG"/>-->
+<!--					</section>-->
+
+					<section data-auto-animate data-background-transition="slide">
+						<img class="noborder" src="figures/AAM-SEALS/AAM_SEAL_1.png"
+							style="position:fixed; top: 10px; left: 450px; width: 350px;" />
+						<img class="noborder fragment" data-fragment-index="1" src="figures/AAM-SEALS/AAM_SEAL_2.svg"
+							style="position:fixed; top: 80px; left: 610px; width: 30px;" />
+						<img class="noborder fragment" data-fragment-index="2" src="figures/AAM-SEALS/AAM_SEAL_3.svg"
+							style="position:fixed; top: 150px; left: 178px; width: 450px;" />
+						<img class="noborder fragment" data-fragment-index="6" src="figures/AAM-SEALS/AAM_SEAL_4.svg"
+							style="position:fixed; top: 150px; left: 623px; width: 450px;" />
+
+						<div class="text-container fragment" data-fragment-index="3" style="position: absolute; top: -10px; left: 30px;">
+						<p style="font-size: 0.6em"><b style="color: deepskyblue">A</b>erial-<b style="color: deepskyblue">A</b>quatic <b style="color: deepskyblue">M</b>anipulator Design</p>
+
+						</div>
+
+						<div style="position: fixed; top: 25px; left: -3px; ">
+							<video class="fragment" data-fragment-index="4" width="30%" style="position: fixed; bottom: 240px; left: 30px" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/1.mp4" type="video/mp4">
+							</video>
+
+							<video class="fragment" data-fragment-index="5" width="30%" style="position: fixed; bottom: 30px; left: 30px" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/2.mp4" type="video/mp4">
+							</video>
+
+						</div>
+
+						<div class="text-container fragment" data-fragment-index="7" style="position: absolute; top: -10px; right: 30px;">
+							<p style="font-size: 0.6em"><b style="color: deepskyblue">SE</b>a <b style="color: deepskyblue">A</b>ir, <b style="color: deepskyblue">L</b>and <b style="color: deepskyblue">S</b>imulator Design</p>
+						</div>
+
+						<div class="text-container fragment" data-fragment-index="8" style="position: absolute; top: 70px; right: 30px; width: 400px">
+							<p style="font-size: 0.6em">Compare: <br><br><br><b style="color: deepskyblue">Rigid-Body Hydrodynamics</b><br><br><br> and <br><br><br><b style="color: deeppink">Particle-based Hydrodynamics</b></p>
+
+						</div>
+
+						<div class="fragment" data-fragment-index="9" style="position: fixed; top: 25px; left: -3px; ">
+							<video width="30%" style="position: fixed; bottom: 240px; right: 30px" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/AAM_SEAL_7.mp4" type="video/mp4">
+							</video>
+
+							<video width="30%" style="position: fixed; bottom: 30px; right: 30px" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/AAM_SEAL_8.mp4" type="video/mp4">
+							</video>
+
+						</div>
+
+						<div class="fragment" data-fragment-index="10" style="position: fixed; top: 25px; left: -3px; ">
+							<video width="36%" style="position: fixed; bottom: 30px; right: 30px; " controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/AAM_short.mp4" type="video/mp4">
+							</video>
+						</div>
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<img class="noborder" src="figures/AAM-SEALS/AAM_SEAL_1.png"
+							style="position:fixed; top: 10px; left: 450px; width: 350px;" />
+						<img class="noborder" src="figures/AAM-SEALS/AAM_SEAL_2.svg"
+							style="position:fixed; top: 80px; left: 610px; width: 30px;" />
+						<img class="noborder" src="figures/AAM-SEALS/AAM_SEAL_3.svg"
+							style="position:fixed; top: 150px; left: 178px; width: 450px;" />
+
+
+						<div class="text-container" style="position: absolute; top: -140px; left: 30px;">
+						<p style="font-size: 0.6em"><b style="color: deepskyblue">A</b>erial-<b style="color: deepskyblue">A</b>quatic <b style="color: deepskyblue">M</b>anipulator Design</p>
+
+						</div>
+
+						<img class="noborder fragment" data-fragment-index="0" src="figures/AAM-SEALS/AAM_Cameras.png"
+							style="position:fixed; top: 260px; left: -30px; width: 650px;" />
+
+						<img class="noborder fragment" data-fragment-index="1" src="figures/AAM-SEALS/AAM_Control.PNG"
+							style="position:fixed; top: 260px; left: -30px; width: 980px;" />
+					</section>
+
+					<section data-auto-animate>
+						<img class="noborder" src="figures/AAM-SEALS/AAM_SEAL_1.png"
+							style="position:fixed; top: 10px; left: 450px; width: 350px;" />
+						<img class="noborder" src="figures/AAM-SEALS/AAM_SEAL_2.svg"
+							style="position:fixed; top: 80px; left: 610px; width: 30px;" />
+						<img class="noborder" src="figures/AAM-SEALS/AAM_SEAL_3.svg"
+							style="position:fixed; top: 150px; left: 178px; width: 450px;" />
+
+
+						<div class="text-container" style="position: absolute; top: -140px; left: 30px;">
+						<p style="font-size: 0.6em"><b style="color: deepskyblue">A</b>erial-<b style="color: deepskyblue">A</b>quatic <b style="color: deepskyblue">M</b>anipulator Design</p>
+
+						</div>
+
+						<img class="noborder" src="figures/AAM-SEALS/AAM_Cameras.png"
+							style="position:fixed; top: 260px; left: 30px; width: 360px;" />
+
+						<img class="noborder" src="figures/AAM-SEALS/AAM_Control.PNG"
+							style="position:fixed; top: 460px; left: 30px; width: 480px;" />
+
+						<img class="noborder fragment" data-fragment-index="0" src="figures/AAM-SEALS/AAM_SEAL_4.svg"
+							style="position:fixed; top: 150px; left: 623px; width: 450px;" />
+
+
+						<div class="text-container fragment" data-fragment-index="1" style="position: absolute; top: -140px; right: 30px;">
+							<p style="font-size: 0.6em"><b style="color: deepskyblue">SE</b>a <b style="color: deepskyblue">A</b>ir, <b style="color: deepskyblue">L</b>and <b style="color: deepskyblue">S</b>imulator Design</p>
+						</div>
+
+						<img class="noborder fragment" data-fragment-index="2" src="figures/AAM-SEALS/SEALS_arch.PNG"
+							style="position:fixed; top: 260px; right: 0px; width: 900px;" />
+
+					</section>
+
+					<section data-auto-animate data-background-color="black">
+						<h3>Realistic Hydrodynamics in SEALS</h3>
+
+						<div>
+							<video width="100%" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/Air_Water_Transition_Demo.mp4" type="video/mp4">
+							</video>
+						</div>
+
+						<img class="fragment" data-fragment-index="0" style="z-index: 1; position: fixed; top: 190px; left: 300px; height: 460px; width: auto; opacity: 0.8" data-src="figures/AAM-SEALS/air_water_acceleration.png">
+
+					</section>
+
+					<section data-auto-animate data-background-color="black">
+						<h3>Realistic Air-Water Transition Dynamics</h3>
+
+						<div>
+							<video width="100%" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/Air_Water_Transition_Demo.mp4" type="video/mp4">
+							</video>
+						</div>
+
+						<img class="fragment" style="z-index: 1; position: fixed; top: 250px; right: 36px; height: 250px; width: auto; opacity: 0.8" data-src="figures/AAM-SEALS/air_water_acceleration.png">
+						<img class="fragment" data-fragment-index="0" style="z-index: 1; position: fixed; top: 250px; left: 32px; height: 250px; width: auto; opacity: 0.8" data-src="figures/AAM-SEALS/real_imu_AAM.png">
+
+					</section>
+
+					<section data-auto-animate>
+						<h2>How about ocean waves?</h2>
+						<img style="position: fixed; top: 390px; left: 460px; height: 240px; width: auto;" data-src="figures/AAM-SEALS/ocean_wave.jfif">
+
+					</section>
+
+					<section data-auto-animate data-background-color="black">
+						<h2>How about ocean waves?</h2>
+
+						<div>
+							<video width="100%" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/Wave_Demo_Short_2.mp4" type="video/mp4">
+							</video>
+						</div>
+					</section>
+
+					<section>
+						<h3>Robot Control</h3>
+
+						<div class="fragment" data-fragment-index="2">
+							<video controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/oval_traj_following_demo_4x_speed.mp4" type="video/mp4">
+							</video>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+							<h3>Going Beyond Control: Aquatic Animal Search <span class="no-transform">and</span> Capture Challenge</h3>
+					</section>
+
+					<section data-auto-animate data-background-color="black">
+						<h3>Fully Controllable <span class="no-transform">and</span> Trainable Aquatic Animals</h3>
+
+						<div>
+							<video width="100%" controls autoplay muted loop>
+								<source src="figures/AAM-SEALS/Moving_Crab.mp4" type="video/mp4">
+							</video>
+						</div>
+					</section>
+
+<!--					<section data-auto-animate>-->
+<!--						<h3 class="toptitle">Aquatic Animal Search <span class="no-transform">and</span> Capture Challenge</h3>-->
+
+<!--						<div style="width:100%; height:300px; display: flex; justify-content: center;">-->
+<!--							<div class="columnwrapper" style="width:900px;height:auto;">-->
+<!--								<p style="margin-top: 10px; font-size: x-large;">-->
+<!--									<b>Demonstration Dataset</b>-->
+<!--								</p>-->
+
+<!--								<img class="noborder" height="650px" src="figures/AAM-SEALS/1st_and_3rd_views.gif" />-->
+<!--								<p class="reference" style="margin-top: -10px; font-size: x-large;">-->
+<!--									Action Space: Flying velocities, arm joint positions, gripper finger position <br> Observation Space: RGB image of front camera and depth image of bottom camera <br>Success Criteria: The animal only has contact points with robot gripper for 3 seconds <br>-->
+<!--								</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</section>-->
+
+					<section data-auto-animate>
+						<h3 class="toptitle">Aquatic Animal Search <span class="no-transform">and</span> Capture Challenge</h3>
+
+						<div style="width:100%; height:300px; display: flex; justify-content: center;">
+							<div class="columnwrapper" style="width:900px;height:auto;">
+								<p style="margin-top: 10px; font-size: x-large;">
+									<b>Demonstration Dataset</b>
+								</p>
+
+								<img class="noborder" height="650px" src="figures/AAM-SEALS/catch_crab_air_short.gif" />
+								<p class="reference" style="margin-top: -10px; font-size: x-large;">
+									Action Space: Flying velocities, arm joint positions, gripper finger position <br> Observation Space: RGB image of front camera and depth image of bottom camera <br>Success Criteria: The animal only has contact points with robot gripper for 3 seconds <br>
+								</p>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section>
+
+					<section data-auto-animate>
+						<h2>Reinforcement Learning <span class="no-transform">from</span> Demonstrations</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h2 style="font-size: xxx-large">Reinforcement Learning <span class="no-transform">from</span> Demonstrations</h2>
+						<img class="noborder" height="350px" src="figures/AAM-SEALS/RLfD_results.png" />
+					</section>
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h2>Takeaways & Future Opportunities</h2>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle">Takeaways & Future Opportunities</h2>
+						<h4 class="animate__backInLeft" data-delay="200" style="text-align: left">Takeaways:</h4>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle">Takeaways & Future Opportunities</h2>
+						<h4 style="text-align: left">Takeaways:</h4>
+						<h5 class="animate__backInLeft" data-delay="200" style="text-align: left">✅ AAM-SEALS <span class="lowercase-first-uppercase">introduces a novel class of robots, a multi-environment simulator, and a new aquatic animal-catching challenge</span></h5>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle">Takeaways & Future Opportunities</h2>
+						<h4 style="text-align: left; color: dimgrey; font-size: 0.8em">Takeaways:</h4>
+						<h5 style="text-align: left; color: dimgrey; font-size: 0.8em">✅ AAM-SEALS <span class="lowercase-first-uppercase">introduces a novel class of robots, a multi-environment simulator, and a new aquatic animal-catching challenge</span></h5>
+						<h4 class="animate__backInLeft" data-delay="200" style="text-align: left">Future Opportunities:</h4>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle">Takeaways & Future Opportunities</h2>
+						<h4 style="text-align: left; color: dimgrey; font-size: 0.8em">Takeaways:</h4>
+						<h5 style="text-align: left; color: dimgrey; font-size: 0.8em">✅ AAM-SEALS <span class="lowercase-first-uppercase">introduces a novel class of robots, a multi-environment simulator, and a new aquatic animal-catching challenge</span></h5>
+						<h4 style="text-align: left">Future Opportunities:</h4>
+						<div class="animate__backInLeft" data-delay="200">
+							<img src="figures/redDimond.png" alt="Image Icon" style="position: absolute; top: -40px; left: -10px; height: 84px;">
+							<h5 style="text-align: left">  &nbsp; &nbsp; &nbsp; &nbsp;Leverage AAM-SEALS <span class="lowercase-first-uppercase">to support real-world</span> AAM <span class="lowercase-first-uppercase">development (an ongoing project)</span></h5>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h2 class="toptitle">Takeaways & Future Opportunities</h2>
+						<h4 style="text-align: left; color: dimgrey; font-size: 0.8em">Takeaways:</h4>
+						<h5 style="text-align: left; color: dimgrey; font-size: 0.8em">✅ AAM-SEALS <span class="lowercase-first-uppercase">introduces a novel class of robots, a multi-environment simulator, and a new aquatic animal-catching challenge</span></h5>
+						<h4 style="text-align: left">Future Opportunities:</h4>
+						<div>
+							<img src="figures/redDimond.png" alt="Image Icon" style="position: absolute; top: 200px; left: -10px; height: 56px;">
+							<h5 style="text-align: left; color: dimgrey; font-size: 0.8em">  &nbsp; &nbsp; &nbsp; &nbsp;Leverage AAM-SEALS <span class="lowercase-first-uppercase">to support real-world</span> AAM <span class="lowercase-first-uppercase">development (an ongoing project)</span></h5>
+						</div>
+
+						<div class="animate__backInLeft" data-delay="200">
+							<img src="figures/bludDimond.jpg" alt="Image Icon" style="position: absolute; top: -20px; left: -10px; height: 53px;">
+							<h5 style="text-align: left"> &nbsp; &nbsp; &nbsp; &nbsp;Attach <span class="lowercase-first-uppercase">the 2nd manipulator and explore novel opportunities in</span> AAM-SEALS</h5>
+						</div>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		<script src="plugin/d3js/d3js_v2.js"></script>
+
+<!--	    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+<!--	    <script src="../plugin/diagram/revealjs-diagram-yantian-v4.js"></script>-->
+
+		<script src="plugin/reveal.js-d3/reveald3.js"></script>
+
+
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				customcontrols: {
+				controls: [
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				}
+				]
+				},
+
+  				chalkboard: { // font-awesome.min.css must be available
+					src: "chalkboard/chalkboard.json",
+					toggleChalkboardButton: { left: "80px" },
+					toggleNotesButton: { left: "130px" },
+//					theme: "whiteboard",
+//					background: [ 'rgba(127,127,127,.1)' , 'reveal.js-plugins/chalkboard/img/whiteboard.png' ],
+//					pen: [ 'reveal.js-plugins/chalkboard/img/boardmarker.png' , 'reveal.js-plugins/chalkboard/img/boardmarker.png' ],
+//				        color: [ 'rgba(0,0,255,1)', 'rgba(0,0,255,0.5)' ],
+//				        draw: [ (RevealChalkboard) ?  RevealChalkboard.drawWithPen : null , (RevealChalkboard) ? RevealChalkboard.drawWithPen : null ],
+				},
+				keyboard: {
+				    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle chalkboard when 'c' is pressed
+				    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+				    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+				     8: function() { RevealChalkboard.reset() },	// reset all chalkboard data when 'BACKSPACE' is pressed
+				    68: function() { RevealChalkboard.download() },	// downlad chalkboard drawing when 'd' is pressed
+					90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
+					84: function() { Recorder.fetchTTS(); } 	// press 't' to fetch TTS audio files
+				},
+				hash: true,
+				// Options
+				width: 1280, // Set the width of the presentation
+				height: 720, // Set the height of the presentation
+				aspectRatio: 16/9, // Set the aspect ratio to 16:9
+				slideNumber: true,
+				controls: true,
+
+
+				// Charts
+				chart: {
+						defaults: {
+							color: 'black', // color of labels
+							scale: {
+								beginAtZero: true,
+<!--								ticks: { stepSize: 1 },-->
+								grid: { color: "lightgray" } , // color of grid lines
+							},
+						},
+						line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] },
+						bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+						pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					},
+<!--				menu: {-->
+<!--    themes: false,-->
+<!--    transitions: false,-->
+<!--    markers: true,-->
+<!--    hideMissingTitles: true-->
+<!--}-->
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealChalkboard, RevealCustomControls, RevealLoadContent, RevealFullscreen, RevealMath.KaTeX, RevealMenu, RevealChart, Reveald3, Appearance, RevealAnimate ]
+			});
+
+		  // Add event listener for slide changes after initialization
+		  Reveal.addEventListener('ready', function(event) {
+			console.log('reveal.js initialized');
+
+			Reveal.addEventListener('slidechanged', function(event) {
+			  console.log('Slide changed event fired:', event);
+
+			  // Check if the current slide is the one where you want to refresh the browser
+			  if (event.indexh === 7 && event.indexv === 5) {
+				console.log('Refreshing browser');
+				// Refresh the browser
+				location.reload();
+			  }
+			});
+		  });
+
+		</script>
+
+<!--&lt;!&ndash; Add this script at the end of your HTML file, just before the closing </body> tag &ndash;&gt;-->
+<!--<script>-->
+<!--    // Function to preload the video-->
+<!--    function preloadVideo(videoElement) {-->
+<!--        if (videoElement.readyState === 4) {-->
+<!--            // Video is fully loaded, do nothing-->
+<!--            return;-->
+<!--        }-->
+
+<!--        // Start loading the video-->
+<!--        videoElement.load();-->
+<!--    }-->
+
+<!--    // Listen for Reveal.js initialization event-->
+<!--    Reveal.addEventListener('ready', function(event) {-->
+<!--        // Get the video element-->
+<!--        var videoElement = document.querySelector('video');-->
+
+<!--        // Preload the video-->
+<!--        preloadVideo(videoElement);-->
+<!--    });-->
+
+<!--    // Listen for slide change event-->
+<!--    Reveal.addEventListener('slidechanged', function(event) {-->
+<!--        // Get the video element in the current slide-->
+<!--        var videoElement = event.currentSlide.querySelector('video');-->
+
+<!--        // Preload the video-->
+<!--        preloadVideo(videoElement);-->
+<!--    });-->
+<!--</script>-->
+
+	</body>
+</html>
